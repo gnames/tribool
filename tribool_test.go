@@ -3,8 +3,8 @@ package tribool_test
 import (
 	"testing"
 
-	"github.com/gnames/gnlib/encode"
-	tbl "github.com/gnames/gnlib/tribool"
+	"github.com/gnames/gnfmt"
+	tbl "github.com/gnames/tribool"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -32,7 +32,7 @@ func TestNew(t *testing.T) {
 }
 
 func TestJSON(t *testing.T) {
-	enc := encode.GNjson{}
+	enc := gnfmt.GNjson{}
 	type dataStruct struct {
 		Field1 string      `json:"f1"`
 		Tb     tbl.Tribool `json:"tb"`
